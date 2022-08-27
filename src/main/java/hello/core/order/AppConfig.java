@@ -31,6 +31,7 @@ public class AppConfig {
     //@Configuration을 안쓰면 싱글톤 패턴이 깨진다.
     //만약 @Configuration를 안쓴다면, @Autowired사용해준다. -> 뒤에 설명 예정
 //    @Autowired MemberRepository memberRepository;
+    ///
 
     @Bean
     public MemberService memberService(){
@@ -55,4 +56,5 @@ public class AppConfig {
 //        return new FixDiscountPolicy();
         return new RateDiscountPolicy();
     }
+    //
 }

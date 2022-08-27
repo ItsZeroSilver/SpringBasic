@@ -6,6 +6,7 @@ import hello.core.member.MemoryMemberRepository;
 import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -26,6 +27,10 @@ public class AppConfig {
     //System.out.println("call AppConfig.memberService");
     //System.out.println("call AppConfig.memberRepository");
     //System.out.println("call AppConfig.orderService");
+
+    //@Configuration을 안쓰면 싱글톤 패턴이 깨진다.
+    //만약 @Configuration를 안쓴다면, @Autowired사용해준다. -> 뒤에 설명 예정
+//    @Autowired MemberRepository memberRepository;
 
     @Bean
     public MemberService memberService(){

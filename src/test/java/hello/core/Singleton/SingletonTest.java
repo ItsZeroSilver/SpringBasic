@@ -1,8 +1,7 @@
 package hello.core.Singleton;
 
 import hello.core.member.MemberService;
-import hello.core.order.AppConfig;
-import org.assertj.core.api.Assertions;
+import hello.core.AppConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
@@ -53,7 +52,7 @@ public class SingletonTest {
         //참조값이 다른 것을 확인
         System.out.println("memberService1 =" + memberService1);
         System.out.println("memberService2 =" + memberService2);
-        //결과가 달라야함
+        //결과가 달라야함ㅁ
         //순수한 DI컨테이너인 AppConifg는 요청을 할 때 마다 객체를 새로 생성한다.
         assertThat(memberService1).isSameAs(memberService2);
     }

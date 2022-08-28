@@ -1,7 +1,7 @@
 package hello.core.Order;
 
 import hello.core.member.MemberService;
-import hello.core.order.AppConfig;
+import hello.core.AppConfig;
 import hello.core.order.Order;
 import hello.core.order.OrderService;
 import hello.core.member.Grade;
